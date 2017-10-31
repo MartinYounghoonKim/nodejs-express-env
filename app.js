@@ -27,6 +27,7 @@ app.set('view engine', 'handlebars');
 /**
  * @param { Router }: 각 페이지별 Router 
  */
+app.use(cors());
 const clientRouter = require('./router/client.router');
 const apiRouter = require('./router/api.router');
 clientRouter(app);
@@ -35,7 +36,6 @@ apiRouter(app);
 /**
  * @param static 파일 경로 설정
  */
-app.use(cors());
 app.use(express.static('./src/assets'));
 
 const server = app.use(express).listen(port, ()=>{
