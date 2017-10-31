@@ -19,6 +19,7 @@
     "fs": "0.0.1-security"
   },
   "devDependencies": {
+    "cors": "^2.8.4",
     "express-handlebars": "^3.0.0"
   }
 }
