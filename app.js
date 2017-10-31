@@ -36,7 +36,7 @@ apiRouter(app);
 /**
  * @param static 파일 경로 설정
  */
-app.user(cors());
+app.use(cors());
 app.use(express.static('./src/assets'));
 
 const server = app.use(express).listen(port, ()=>{
