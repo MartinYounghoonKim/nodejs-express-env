@@ -1,3 +1,6 @@
+/**
+ * @param { requireconfig }: 각 페이지의 library/module의 config 설정
+ */
 requirejs.config({
   baseUrl: '/js',
   config: {
@@ -8,8 +11,18 @@ requirejs.config({
     }
   },
   paths:{
+    //Library for app
     'babel': 'library/babel'
     ,'es6': 'library/es6'
+    ,'axios': 'library/axios.min'
+
+    //Controller for app
+    ,'Main': 'controller/Main'
+
+    //Config for app
+    ,'apiCore': 'config/api.core'
+
+    //Module for app
     ,'foo': 'module/foo'
     ,'bar': 'module/bar'
     ,'foobar': 'module/foobar'
@@ -17,12 +30,17 @@ requirejs.config({
     ,'promise': 'module/promise'
   }
 });
-requirejs(['es6!foobar','es6!syncModule'], function(foobar,syncModule){
-
-  foobar();
-  //promise pattern
-  syncModule()
-  .then( res => {
-    console.log(res);
-  })
+requirejs([], function(){
+  const Controller = document.body.dataset.controller;
+  requirejs([Controller]);
 });
+
+// requirejs(['es6!foobar','es6!syncModule'], function(foobar,syncModule){
+
+//   foobar();
+//   //promise pattern
+//   syncModule()
+//   .then( res => {
+//     console.log(res);
+//   })
+// });
