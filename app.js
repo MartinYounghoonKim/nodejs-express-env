@@ -14,9 +14,7 @@ app.locals.pretty=true;
  * https://github.com/ericf/express-handlebars
  */
 const handlebars = require('express-handlebars');
-const hbs = handlebars.create({
-  defaultLayout: __dirname + '/src/views/index'
-});
+const hbs = handlebars.create();
 
 /**
  * @param { views }: client views 설정

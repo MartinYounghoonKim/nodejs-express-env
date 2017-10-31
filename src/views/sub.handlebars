@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>MVC Express Application</title>
+    <link rel="stylesheet" href="/scss/basic.css"/>
+</head>
+<body>
+    서브페이지
+    <script data-main="/js/config/require.config" src="/js/library/require-2.1.16.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script>
+        $.ajax({
+            url:'http://18.216.71.122:4000/',
+            type:'GET',
+            success:function(data){
+                console.log(data)
+            }
+        })
+    </script>
+</body>
+</html>
