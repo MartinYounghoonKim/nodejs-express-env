@@ -19,7 +19,6 @@ const hbs = handlebars.create();
 
 /**
  * @param { views }: client views 설정
- * 
  */
 app.set('views',path.join(__dirname, 'src/views'));
 app.engine('handlebars', hbs.engine );

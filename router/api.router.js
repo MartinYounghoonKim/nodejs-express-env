@@ -1,5 +1,7 @@
-module.exports = (app)=>{
-    app.get('/board', (req,res) => {
-      res.send('Board');
+const prefix = 'api';
+
+module.exports = (app) => {
+    app.get(`/${prefix}`, (req,res) => {
+      res.send('[Success]: Lazy side api server!!');
     });   
   }
