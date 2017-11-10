@@ -7,6 +7,7 @@ const path = require('path');
 const bodyParser = require('body-parser');
 
 
+
 app.use( bodyParser.urlencoded({extended:false}) );
 app.locals.pretty=true;
 
@@ -16,6 +17,15 @@ app.locals.pretty=true;
  */
 const handlebars = require('express-handlebars');
 const hbs = handlebars.create();
+
+/**
+ * @param { mysql Connection }
+ * https://github.com/ericf/express-handlebars
+ */
+const mysqlConfig = require('./config/database.config');
+const mysql = require('mysql');
+const connection = mysql.createConnection(mysqlConfig);
+connection.connect();
 
 /**
  * @param { views }: client views 설정

@@ -16,7 +16,8 @@
     "body-parser": "^1.17.2",
     "ejs": "^2.5.7",
     "express": "^4.15.3",
-    "fs": "0.0.1-security"
+    "fs": "0.0.1-security",
+    "mysql": "^2.15.0"
   },
   "devDependencies": {
     "cors": "^2.8.4",
