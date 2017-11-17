@@ -40,7 +40,7 @@ app.set('view engine', 'handlebars');
 app.use(cors());
 const clientRouter = require('./router/client.router');
 const apiRouter = require('./router/api.router');
-clientRouter(app);
+clientRouter(app, connection);
 apiRouter(app);
 
 /**
