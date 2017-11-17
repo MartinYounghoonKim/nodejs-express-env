@@ -1,7 +1,7 @@
 module.exports ={
   host : '127.0.0.1',
   user : 'root',
-  password : 'root1',
+  password : 'lazyside123!',
   port : 3306,
-  database : 'lazyside_admin'
+  database : 'lazyside_test_DB'
 };

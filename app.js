@@ -24,8 +24,8 @@ const hbs = handlebars.create();
  */
 const mysqlConfig = require('./config/database.config');
 const mysql = require('mysql');
-// const connection = mysql.createConnection(mysqlConfig);
-// connection.connect();
+const connection = mysql.createConnection(mysqlConfig);
+connection.connect();
 
 /**
  * @param { views }: client views 설정
