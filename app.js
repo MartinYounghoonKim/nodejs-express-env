@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const cors = require('cors');
-const port = 4000;
+const port = 3000;
 const fs = require('fs');
 const path = require('path');
 const bodyParser = require('body-parser');
@@ -24,8 +24,8 @@ const hbs = handlebars.create();
  */
 const mysqlConfig = require('./config/database.config');
 const mysql = require('mysql');
-const connection = mysql.createConnection(mysqlConfig);
-connection.connect();
+// const connection = mysql.createConnection(mysqlConfig);
+// connection.connect();
 
 /**
  * @param { views }: client views 설정
